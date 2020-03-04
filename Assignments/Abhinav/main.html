@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="custom.css">
     <script src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
 </head>
 <body>
 <div class="main_body">
 <div class="d-flex justify-content-center align-items-center container ">
         <form class="form-inline">
             <div class="form-group">
-                <input size="50" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Image Link">
+                <input size="50" type="link" class="form-control" id="exampleFormControlInput1" placeholder="Enter Image Link">
                 <div id = "buttons">
                     <button type="button" onclick="Display()" class="btn btn-success">Submit</button>
                     <button type="button" onclick="Delete()" class="btn btn-danger">Delete</button>
@@ -26,8 +27,9 @@
     <img class = "img-responsive img-fluid" id ="image" src="" >
 </div>
 </div>
-<script>
-   function Display(){
+<script type="text/javascript">
+    
+     function Display(){
 
         var y  = document.getElementById("image");
         var x = document.getElementById("exampleFormControlInput1").value;
@@ -37,6 +39,7 @@
             y.style.display = "block";
         }
        document.getElementById("image").src = x;
+       
    }
     function Delete() {
         var y  = document.getElementById("image");
@@ -44,6 +47,10 @@
        document.getElementById("exampleFormControlInput1").value= "";
         y.style.display = "none";
     }
+
+
+
 </script>
+    <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>
